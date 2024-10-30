@@ -27,5 +27,6 @@ jobs:
           }} --is-linux --number-of-workers 1 --sku B1 --location ${{
           secrets.LOC }}
           az webapp create -g ${{ secrets.RG }} -p ${{ secrets.ASP }} -n ${{ secrets.WEBAPP }}  --runtime "node:20-lts"
+          az extension add -n application-insights
           
 
